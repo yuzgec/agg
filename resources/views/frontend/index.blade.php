@@ -174,7 +174,7 @@
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>

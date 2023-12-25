@@ -19,9 +19,9 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                     <i class="ti-home"></i>
                 </a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="{{ route('home')}}">Anasayfa</a>
+                <a href="{{ route('home')}}" title="Anasayfa">Anasayfa</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
-                <a href="#" class="stay c-default opacity-7">Kurumsal</a>
+                <a href="{{ route('service')}}" title="Hizmetlerimiz"  class="c-default">Hizmetlerimiz</a>
                 <i class="ti-angle-right fs-7 mx-15"></i>
 
                 <a href="#" class="stay c-default opacity-7">{{ $Detay->title}}</a>

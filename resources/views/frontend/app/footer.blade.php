@@ -1,4 +1,4 @@
-<footer id="footer" class="pt-80 bg-dark5 relative">
+<footer id="footer" class="pt-60 bg-dark5 relative">
     <div class="container">
         <div class="row row-eq-height">
 
@@ -11,7 +11,7 @@
                 <h5 class="white fs-15">Sayfalar</h5>
                 <ul class="list list-lg px-0 gray5 pt-40 fs-16">
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Hakkımızda" class="white-hover">
+                        <a href="{{ route('home')}}" title="Anasayfa" class="white-hover">
                            Anasayfa
                         </a>
                     </li>
@@ -20,18 +20,24 @@
                            Hakkımızda
                         </a>
                     </li>
+                   
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Hakkımızda" class="white-hover">
-                           Referanslarımız
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Hakkımızda" class="white-hover">
+                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Projelerimiz" class="white-hover">
                            Projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Hakkımızda" class="white-hover">
+                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Referanslarımız" class="white-hover">
+                           Referanslarımız
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="İnsan Kaynakları" class="white-hover">
+                           İnsan Kaynakları
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contactus')}}" title="İletişim" class="white-hover">
                            İletişim
                         </a>
                     </li>
@@ -77,10 +83,10 @@
                     </a>
                 </div>
             </div>
-            <div class="col-12 mt-120 mt-70-sm">
+            <div class="col-12 mt-60">
                 <div class="fullwidth bt-1 b-solid b-dark"></div>
                 <div class="py-30 row align-items-center justify-content-lg-between justify-content-center">
-                    <div class="col-lg col-12-sm gray6 fs-16 t-left t-center-sm">© {{ date('Y')}} ahmet Gökşin Güzeltepe Tüm Hakları Saklıdır.</div>
+                    <div class="col-lg col-12-sm gray6 fs-16 t-left t-center-sm">© {{ date('Y')}} Ahmet Gökşin Güzeltepe Tüm Hakları Saklıdır.</div>
                     <div class="col-lg col-12-sm mt-5-sm gray6 fs-16 t-right t-center-sm">
                         <a href="#" target="_blank" class="white-hover slow">Privacy Policy</a> |
                         <a href="#" target="_blank" class="white-hover slow">Terms and Condition</a>

@@ -32,9 +32,13 @@ class HomeController extends Controller
 
     }
 
-    public function servicetedetail($slug){
+    public function service(){
+        return view('frontend.service.index');
+    }
+
+    public function servicedetail($slug){
         $Detay = Service::where('category', 1)->where('slug', $slug)->firstOrFail();
-        return view('frontend.page.index', compact('Detay'));
+        return view('frontend.service.detail', compact('Detay'));
     }
 
     public function projectdetail($slug){
