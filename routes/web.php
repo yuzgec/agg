@@ -16,6 +16,7 @@ Route::get('/makale/{url}', [HomeController::class, 'blogdetail'])->name('blogde
 Route::get('/sss', [HomeController::class, 'sss'])->name('sss');
 Route::get('/video-galeri', [HomeController::class, 'video'])->name('video');
 Route::get('/referanslarimiz', [HomeController::class, 'reference'])->name('reference');
+Route::get('/meltemcomlekcioglu', [HomeController::class, 'qr'])->name('qr');
 Route::get('/sss', [HomeController::class, 'faq'])->name('faq');
 Route::get('/ekibimiz', [HomeController::class, 'team'])->name('team');
 Route::post('/form', [HomeController::class, 'form'])->name('form');

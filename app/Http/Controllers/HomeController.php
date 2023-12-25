@@ -18,6 +18,10 @@ class HomeController extends Controller
         return view('frontend.index');
     }
 
+    public function qr(){
+        return view('frontend.page.meltem');
+    }
+
     public function contact(){
         return view('frontend.contact');
     }
