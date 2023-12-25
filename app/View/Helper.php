@@ -1,9 +1,8 @@
 <?php
+
+use Spatie\Image\Image;
     //SWEETALERT MESAJLARI -
     use Gloudemans\Shoppingcart\Facades\Cart;
-
-
-
 
     function cartControl($id, $text = null){
         foreach (Cart::instance('shopping')->content() as $c){
@@ -13,16 +12,24 @@
         }
     }
 
-    function service($value){
-        if($value == 1){
-            return "servicedetail";
-        }else if($value == 2){
-            return "solutiondetail";
-        }else{
-            return "sectordetail";
+    function imageupload($method, $image){
+        if($method == 'Update'){
+            $method->media()->where('collection_name', 'page')->delete();
         }
+        $w = Image::load($image)->getWidth();
+        $h = Image::load($image)->getHeight();
+        $method->media()->where('collection_name', 'page')->delete();
+        $method->addMedia($image)->withCustomProperties(['width' => $w, 'height' => $h ])->toMediaCollection('page');
+
     }
 
+    function imagesupload($method, array $image){
+        foreach ($image as $item){
+            $w = Image::load($item)->getWidth();
+            $h = Image::load($item)->getHeight();
+            $method->addMedia($item)->withCustomProperties(['width' => $w, 'height' => $h ])->toMediaCollection('gallery');
+        }
+    }
 
 
     //KULLANICI ADI BAŞ HARFLERİNİ GÖSTERME

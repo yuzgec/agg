@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
-use App\Models\ServiceCategory;
+use Spatie\Image\Image;
 use Illuminate\Http\Request;
+use App\Models\ServiceCategory;
+use App\Http\Requests\ServiceRequest;
 use Illuminate\Support\Facades\Artisan;
 
 class ServiceController extends Controller
@@ -42,18 +43,17 @@ class ServiceController extends Controller
         $New->seo_title = $request->seo_title;
 
         if($request->hasfile('image')){
-            $New->addMedia($request->image)->toMediaCollection('page');
+            imageupload($New,$request->image);
         }
+
         if($request->hasfile('gallery')) {
-            foreach ($request->gallery as $item){
-                $New->addMedia($item)->toMediaCollection('gallery');
-            }
+            imageupload($New,null ,$request->gallery);
         }
 
         $New->save();
 
         toast(SWEETALERT_MESSAGE_CREATE,'success');
-        return redirect()->route('service.index');
+        return redirect()->route('service.index',['category' => $request->category, 'name' => $request->name]);
 
     }
 
@@ -66,11 +66,7 @@ class ServiceController extends Controller
 
     public function edit($id)
     {
-
-
         $Edit = Service::findOrFail($id);
-
-        //dd($Edit->getMedia('page'));
         $Kategori = ServiceCategory::pluck('title', 'id');
         return view('backend.service.edit', compact('Edit', 'Kategori'));
     }
@@ -92,20 +88,18 @@ class ServiceController extends Controller
         }
 
         if ($request->hasFile('image')) {
-            $Update->media()->where('collection_name', 'page')->delete();
-            $Update->addMedia($request->image)->toMediaCollection('page');
+            imageupload($Update,$request->image);
         }
 
+
         if($request->hasfile('gallery')) {
-            foreach ($request->gallery as $item){
-                $Update->addMedia($item)->toMediaCollection('gallery');
-            }
+            imagesupload($Update,$request->gallery);
         }
 
         $Update->save();
 
         toast(SWEETALERT_MESSAGE_UPDATE,'success');
-        return redirect()->route('service.index');
+        return redirect()->route('service.index',['category' => $request->category, 'name' => $request->name]);
 
     }
 
@@ -159,7 +153,7 @@ class ServiceController extends Controller
         $Delete->media()->where('id', \request('image_id'))->delete();
 
         toast(SWEETALERT_MESSAGE_DELETE,'success');
-        return redirect()->route('service.edit', $id);
+        return redirect()->back();
 
     }
 }
