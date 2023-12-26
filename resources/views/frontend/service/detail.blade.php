@@ -7,7 +7,7 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     <div class="container-md">
         <div class="t-center">
             <h5 class="fs-11 ls-4 semibold white uppercase">
-               Ahmet GÖkşin Güzeltepe
+                Ahmet Gökşin Güzeltepe
             </h5>
             <h1 class="mt-15 lh-md white">
                {{ $Detay->title}}

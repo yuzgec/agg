@@ -10,18 +10,18 @@
               <div class="col-lg-8 py-90 pt-120-sm pb-10-sm t-left t-center-sm">
                    <div class="bg-soft-white3 px-15 py-10 radius d-inline-flex animated" data-animation="fadeInDown" data-animation-delay="500">
                         <h5 class="dark medium fs-17">
-                             Computer science
+                            Ahmet Gökşin Güzeltepe
                         </h5>
                    </div>
                    <h2 class="mt-30 mt-20-sm fs--lg lh-sm dark medium animated" data-animation="fadeInDown" data-animation-delay="700">
-                        The ideas that make customers go wow
+                       
                    </h2>
                    <p class="mt-40 mt-25-sm fs-20 lh-30 dark animated" data-animation="fadeInDown" data-animation-delay="900">
-                        Computer science education cannot make anybody an expert programmer.
-                   </p>
+
+                </p>
                    <div class="mt-50 animated" data-animation="fadeInDown" data-animation-delay="1100">
                         <a href="#about" class="lg-btn bg-white b-2 b-white bg-transparent-hover gray8 white-hover radius-xl uppercase semibold slow-sm">
-                             Get started
+                            İletişime Geç
                         </a>
                    </div>
               </div>
@@ -132,22 +132,22 @@
                     </li>
                     <li>
                         <div data-filter=".art" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Art
+                            Katalog
                         </div>
                     </li>
                     <li>
                         <div data-filter=".photography" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Photography
+                            Ambalaj Tasarım
                         </div>
                     </li>
                     <li>
                         <div data-filter=".graphic" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Graphic
+                            Logo Tasarım
                         </div>
                     </li>
                     <li>
                         <div data-filter=".brand" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Brand
+                            Web Sitesi
                         </div>
                     </li>
                 </ul>
@@ -155,7 +155,18 @@
 
             <div id="portfolio-items" class="mt-40">
 
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
+                    <div class="work-image">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
+                    </div>
+                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
+                        <div class="line bg-colored1 height-1 width-0"></div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
+                    </div>
+                </a>
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
+                    
                     <div class="work-image">
                         <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
@@ -165,20 +176,30 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
-                    
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
+                    
                     <div class="work-image">
                         <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                    </div>
+                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
+                        <div class="line bg-colored1 height-1 width-0"></div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
+                    </div>
+                </a>
+                <a href="{{ route('home')}}" class="cbp-item art photography">
+                    <div class="work-image">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -186,20 +207,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -207,20 +228,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -228,20 +249,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -249,20 +270,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -270,20 +291,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -291,20 +312,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -312,20 +333,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -333,42 +354,21 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="project-01.html" class="cbp-item art photography">
                     <div class="work-image">
                         <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
 
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -376,20 +376,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -397,20 +397,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -418,20 +418,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -439,20 +439,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -460,20 +460,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -481,20 +481,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -502,20 +502,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -523,20 +523,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -544,20 +544,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -565,20 +565,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -586,20 +586,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -607,20 +607,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -628,20 +628,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -649,20 +649,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -670,18 +670,18 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
                         <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/mito-noel.png" width="1080" height="1920" alt="Portfolio picture template">
                     </div>
@@ -691,9 +691,9 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -701,20 +701,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -722,20 +722,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
                         <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -743,20 +743,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -764,20 +764,20 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-01.html" class="cbp-item art photography">
+                <a href="{{ route('home')}}" class="cbp-item art photography">
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
@@ -785,27 +785,27 @@
                         <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
           
-                <a href="project-02.html" class="cbp-item photography graphic">
+                <a href="{{ route('home')}}" class="cbp-item photography graphic">
                     
                     <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/YOYO CHIPSY-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
+                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
                     </div>
                     <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
                         <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Is everything round?</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
+                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
                     </div>
                 </a>
                
