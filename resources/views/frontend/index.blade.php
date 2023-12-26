@@ -86,11 +86,14 @@
     				</h1>
 
     				<p class="mt-20 fs-20 gray7 lh-35 lh-30-sm">
-    					Grow transformation mapping to create synergy. Amplify key demographics while remembering to improve overall outcomes.
+                        2009 yılından bu yana grafik tasarım alanında hizmet veren Ahmet Gökşin Güzeltepe, sektördeki derin tecrübesini ve yenilikçi 
+                        bakış açısını her projeye yansıtmaktadır. 
     				</p>
 
     				<p class="mt-15 fs-20 gray7 lh-35 lh-30-sm">
-    					Repurposing blue-sky thinking with the aim to think outside the box. Amplifying below the line and possibly be CMSable. Building mobile-first design and above all, target the low hanging fruit. Informing awareness so that as an end result, we innovate. Drive core competencies with the possibility to further your reach.
+                        Matbaa ile başlayan profesyonel yolculuğu, tanıtım ofisleri, kreatif reklam ajansları ve kurumsal şirketlerdeki çalışmalarla 
+                        devam etmiş, şimdilerde ise freelance grafiker olarak faaliyet göstermektedir. Bu süreçte, sektörün farklı alanlarında
+                         pek çok projeye imza atarak, çeşitli deneyimler edinmiştir.
     				</p>
     				
     			</div>
@@ -100,7 +103,7 @@
                         @foreach ($Service as $item)
                             
                        
-    					<div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30 px-20 px-15-sm c-default">
+    					<div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
     						<div class="bg-colored2 bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
     							<h5 class="text-white fs-17">
     								{{ $item->title}}

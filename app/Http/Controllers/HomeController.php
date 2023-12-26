@@ -36,6 +36,10 @@ class HomeController extends Controller
         return view('frontend.service.index');
     }
 
+    public function reference(){
+        return view('frontend.page.reference');
+    }
+
     public function servicedetail($slug){
         $Detay = Service::where('category', 1)->where('slug', $slug)->firstOrFail();
         return view('frontend.service.detail', compact('Detay'));
