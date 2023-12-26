@@ -30,11 +30,64 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         </div>
     </div>
 </section>
-<div id="elementDescription" class="container py-100 py-100-sm">
 
-    <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
-        {!! $Detay->desc !!}
-    </span>
+<section id="home" class="fullwidth py-120 bg-white">
+    <div class="container-md">
+        <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
+            {!! $Detay->desc !!}
+        </span>
+    </div>
+</section>
 
-</div>
+<section id="portfolio-grid" class="pb-60 pt-50 bt-1 b-gray1 b-solid lightbox_gallery">
+    <div class="container ">
+  
+        <div id="portfolio-items" class="">
+
+            <a href="https://picsum.photos/500/500?random=1" class="cbp-item art photography d-block has-overlay-hover">
+                <div class="work-image">
+                    <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/500/500?random=1" 
+                    width="500" height="500" alt="{{ $Detay->title}}">
+                    <div class="overlay-hover bg-soft-dark4 d-flex align-items-center justify-content-center scale-hover-container slow">
+                        <i class="ti-plus fs-20 white scale-hover"></i>
+                    </div>
+                </div>
+            </a>
+          
+        </div>
+    </div>
+</section>
+@endsection
+
+@section('customJS')
+<script>
+    (function($, window, document, undefined) {
+        'use strict';
+        $('#portfolio-items').cubeportfolio({
+            mediaQueries: [{
+                width: 992,
+                cols: 3,
+            }, {
+                width: 640,
+                cols: 2,
+            }, {
+                width: 480,
+                cols: 1,
+            }],
+            filters: '.filter-tags',
+            defaultFilter: '*',
+            layoutMode: 'masonry',
+            gridAdjustment: 'responsive',
+            gapHorizontal: 10,
+            gapVertical: 10,
+            caption: 'none',
+            animationType: 'quicksand',
+            displayType: 'none',
+            displayTypeSpeed: 0,
+        });
+
+
+    })(jQuery, window, document);
+</script>
+    
 @endsection

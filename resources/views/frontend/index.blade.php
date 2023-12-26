@@ -1,21 +1,5 @@
 @extends('frontend.app.master')
-@section('customCSS')
-<style>
-    /* Image animation */
-    .cbp-item .work-image{-webkit-transform:scale(1);transform:scale(1); -webkit-transition:transform 0.5s;transition:transform 0.5s;}
-    .cbp-item:hover .work-image{-webkit-transform:scale(1.03);transform:scale(1.03);}
-    /* Details animation */
-    .cbp-item .details{opacity:0;-webkit-transform:scale(1.04) perspective(1000px);transform:scale(1.04) perspective(1000px);-webkit-transition:all 0.5s;transition:all 0.5s;}
-    .cbp-item:hover .details{opacity:1;-webkit-transform:scale(1) perspective(1000px);transform:scale(1) perspective(1000px);}
-    /* Texts and line animations */
-    .cbp-item .details .title, .cbp-item .details .tag{opacity:0;-webkit-transform:translateY(15px);transform:translateY(15px);-webkit-transition:all 0.5s;transition:all 0.5s;}
-    .cbp-item:hover .details .title, .cbp-item:hover .details .tag{opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
-    .cbp-item:hover .details .tag{-webkit-transition-delay:0.1s;transition-delay:0.1s;}
-    .cbp-item .details .line{-webkit-transition:all 0.3s;transition:all 0.3s;}
-    .cbp-item:hover .details .line{width:70px!important;}
-</style>
-    
-@endsection
+
 @section('content')
 
 <section id="home" class="mnh-600 mnh-none-sm bg-white relative">
