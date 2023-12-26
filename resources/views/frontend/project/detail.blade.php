@@ -67,70 +67,16 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         <div class="row">
             <div class="col-lg-9 col-12">
                 <div id="gallery-items" class="lightbox_gallery">
-                    <a href="images/portfolio/project_06/image_01.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_01.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                    </a>
-                    <a href="images/portfolio/project_06/image_02.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_02.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_03.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_03.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_04.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_04.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_05.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_05.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_06.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_06.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_07.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_07.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
-                    <a href="images/portfolio/project_06/image_08.jpg" class="cbp-item has-overlay-hover scale-hover-container">
-                        <div class="work-image">
-                            <img src="images/portfolio/project_06/image_08.jpg" alt="Project picture template" class="scale-hover">
-                        </div>
-                        <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
-                            <i class="ti-more white fs-22"></i>
-                        </div>
-                            </a>
+                    @foreach ($Detay->getMedia('gallery') as $item)
+                        <a href="{{ $item->getUrl() }}" class="cbp-item has-overlay-hover scale-hover-container">
+                            <div class="work-image">
+                                {{ $item }}
+                            </div>
+                            <div class="zi-5 overlay-hover slow bg-blur bg-soft-dark5 flex-column t-center">
+                                <i class="ti-more white fs-22"></i>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
                 <!-- End items -->
             </div>

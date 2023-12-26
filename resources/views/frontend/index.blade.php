@@ -1,10 +1,6 @@
 @extends('frontend.app.master')
-
 @section('content')
-
 <section id="home" class="mnh-600 mnh-none-sm bg-white relative">
-
-    
     <div class="container relative zi-5">
          <div class="row align-items-center">
               <div class="col-lg-8 py-90 pt-120-sm pb-10-sm t-left t-center-sm">
@@ -20,7 +16,7 @@
 
                 </p>
                    <div class="mt-50 animated" data-animation="fadeInDown" data-animation-delay="1100">
-                        <a href="#about" class="lg-btn bg-white b-2 b-white bg-transparent-hover gray8 white-hover radius-xl uppercase semibold slow-sm">
+                        <a href="{{ route('contactus')}}" class="lg-btn bg-white b-2 b-white bg-transparent-hover gray8 white-hover radius-xl uppercase semibold slow-sm">
                             İletişime Geç
                         </a>
                    </div>
@@ -30,8 +26,6 @@
               </div>
          </div>
     </div>
-
-
 </section>
 
 {{-- <section id="home" class="relative white height-100vh mnh-600 align-items-center d-flex">
@@ -100,23 +94,21 @@
 
     			<div class="col-md-8 col-12">
     				<div class="row" data-masonry='{"percentPosition":true}'>
-                        @foreach ($Service as $item)
-                            
-                       
-    					<div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
-    						<div class="bg-colored2 bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
-    							<h5 class="text-white fs-17">
-    								{{ $item->title}}
-    							</h5>
-    							<p class="mt-20 fs-18 text-white lh-30">
-                                    {{ $item->short}}    			
-                                </p>
-    						</div>
-    					</div>
+                        @foreach ($Service->where('category', 1) as $item)
+                            <div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
+                                <div class="bg-colored2 bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
+                                    <h5 class="text-white fs-17">
+                                        {{ $item->title}}
+                                    </h5>
+                                    <p class="mt-20 fs-18 text-white lh-30">
+                                        {{ $item->short}}    			
+                                    </p>
+                                </div>
+                            </div>
                         @endforeach
-    				
     				</div>
     			</div>
+
     		</div>
     	</div>
     </section>
@@ -154,664 +146,22 @@
             </div>
 
             <div id="portfolio-items" class="mt-40">
-
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/mito-noel.png" width="1080" height="1920" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">photography, graphic</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item art photography">
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/1000/1000?random={{ rand(1,30)}}" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="title fs-14 white medium uppercase mt-15">Wave</h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-          
-                <a href="{{ route('home')}}" class="cbp-item photography graphic">
-                    
-                    <div class="work-image">
-                        <img src="images/portfolio/alpha_loading.svg" data-cbp-src="/WAVE SUNUM-01.jpg" width="1000" height="1000" alt="Portfolio picture template">
-                    </div>
-                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                        <div class="line bg-colored1 height-1 width-0"></div>
-                        <h3 class="fs-45 lh-50 fs-35-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> Wave </h3>
-                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                    </div>
-                </a>
-               
+                @foreach ($Service->where('category', 2) as $item)
+                    <a href="{{ route('projectdetail', $item->slug)}}" class="cbp-item art photography">
+                        <div class="work-image">
+                            <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" 
+                                 alt="{{ $item->title}} - Gökşin Güzeltepe" />
+                        </div>
+                        <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
+                            <div class="line bg-colored1 height-1 width-0"></div>
+                            <h3 class="fs-25 lh-50 fs-30-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> {{ $item->title}} </h3>
+                            <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
+                        </div>
+                    </a>
+                @endforeach
             </div>
+
         </div>
-        <!-- End container for template -->
     </section>
 
 @endsection
@@ -819,7 +169,6 @@
 <script>
     (function($, window, document, undefined) {
         'use strict';
-        // init cubeportfolio
         $('#portfolio-items').cubeportfolio({
             mediaQueries: [{
                 width: 992,
@@ -843,7 +192,6 @@
             displayTypeSpeed: 0,
         });
 
-        //Get .active class for filters
         $(".cbp-filter-item-active").addClass("active");
         $("[data-filter]").on("click", function(){
             $("[data-filter]").removeClass("active");

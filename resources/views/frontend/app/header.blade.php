@@ -4,7 +4,7 @@
             <div class="col-md-2">
                 <a href="{{ route('home')}}" class="logo">
                      <img src="/logo.jpg" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-100">
-                     <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}"  class="logo-white mxw-100">
+                     <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
                 </a>
             </div>
             <div class="col-md-10 nav-menu">
@@ -32,7 +32,7 @@
                         <a href="#" class="nav-link search-form-trigger"><i class="ti-search"></i></a>
                         <a href="https://www.instagram.com/{{ config('settings.instagram')}}" target="_blank" class="nav-link" title="Instagram"><i class="ti-instagram"></i></a>
                         <a href="https://www.facebook.com/{{ config('settings.facebook')}}" target="_blank" class="nav-link" title="facebook"><i class="ti-facebook"></i></a>
-                        <a href="" class="nav-button white bg-colored fs-12 uppercase bold slow" title="Buy Quadra"><span>Teklif İste</span></a>
+                        <a href="{{ route('contactus')}}" class="nav-button white bg-colored fs-12 uppercase bold slow" title="Teklif İste"><span>Teklif İste</span></a>
                     </li>
                 </ul>
             </div>

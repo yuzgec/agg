@@ -37,7 +37,8 @@ class HomeController extends Controller
     }
 
     public function reference(){
-        return view('frontend.page.reference');
+        $All = Service::where('category', 3)->get();
+        return view('frontend.page.reference',compact('All'));
     }
 
     public function servicedetail($slug){
@@ -50,8 +51,8 @@ class HomeController extends Controller
     }
 
     public function projectdetail($slug){
-        $Detay = Page::where('slug', $slug)->firstOrFail();
-        return view('frontend.page.index', compact('Detay'));
+        $Detay = Service::where('slug', $slug)->firstOrFail();
+        return view('frontend.project.detail', compact('Detay'));
     }
 
     public function form(ContactRequest $request){
