@@ -11,6 +11,8 @@ Route::get('/kurumsal', [HomeController::class, 'corporate'])->name('corporate')
 Route::get('/sayfa/{url}', [HomeController::class, 'corporatedetail'])->name('corporatedetail');
 Route::get('/hizmetlerimiz', [HomeController::class, 'service'])->name('service');
 Route::get('/hizmet/{url}', [HomeController::class, 'servicedetail'])->name('servicedetail');
+Route::get('/projelerimiz', [HomeController::class, 'project'])->name('project');
+Route::get('/proje/{url}', [HomeController::class, 'projectdetail'])->name('projectdetail');
 Route::get('/makaleler', [HomeController::class, 'blog'])->name('blog');
 Route::get('/makale/{url}', [HomeController::class, 'blogdetail'])->name('blogdetail');
 Route::get('/sss', [HomeController::class, 'sss'])->name('sss');
