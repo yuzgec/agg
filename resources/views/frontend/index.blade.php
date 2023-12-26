@@ -73,12 +73,11 @@
         <div class="container">
     		<div class="row">
 
-    			<div class="col-md-4 col-12 pr-50 pr-15-sm">
-    				<h5 class="fs-17 colored uppercase font-secondary">Hakkımızda</h5>
-    				<h1 class="bold mt-20 fs-40 fs-30-sm lh-50 lh-40-sm dark3">
+    			<div class="col-md-5 col-12 pr-50 pr-15-sm">
+    				<h5 class="fs-17 colored uppercase">Hakkımızda</h5>
+    				<h1 class="bold mt-10 fs-40 fs-30-sm lh-50 lh-40-sm dark3">
     					A. Gökşin Güzeltepe <br class="visible-xl hidden-lg">
     				</h1>
-
     				<p class="mt-20 fs-20 gray7 lh-35 lh-30-sm">
                         2009 yılından bu yana grafik tasarım alanında hizmet veren Ahmet Gökşin Güzeltepe, sektördeki derin tecrübesini ve yenilikçi 
                         bakış açısını her projeye yansıtmaktadır. 
@@ -92,11 +91,11 @@
     				
     			</div>
 
-    			<div class="col-md-8 col-12">
+    			<div class="col-md-7 col-12">
     				<div class="row" data-masonry='{"percentPosition":true}'>
                         @foreach ($Service->where('category', 1) as $item)
                             <div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
-                                <div class="bg-colored2 bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
+                                <div class="bg-colored bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
                                     <h5 class="text-white fs-17">
                                         {{ $item->title}}
                                     </h5>
@@ -115,7 +114,7 @@
 
     <section id="portfolio-grid" class="pb-120 pt-90 bt-1 b-gray1 b-solid">
         <div class="container-fluid">
-            <div class="t-center">
+            {{-- <div class="t-center">
                 <ul class="filter-tags justify-content-center d-inline-flex mansalva medium uppercase bb-1 b-solid b-gray2" role="tablist">
                     <li>
                         <div data-filter="*" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
@@ -143,6 +142,10 @@
                         </div>
                     </li>
                 </ul>
+            </div> --}}
+            <div class="col t-center">
+                <h1 class="lh-45 mt-10 uppercase">PROJELERİMİZ</h1>
+                <p class="light gray6 mt-15 lh-30 fs-18">Ajans olarak yapmış olduğumuz bazı örnek çalışmaları inceleyebilirsiniz.</p>
             </div>
 
             <div id="portfolio-items" class="mt-40">
