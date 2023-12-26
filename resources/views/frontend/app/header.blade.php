@@ -20,7 +20,7 @@
                         </ul> 
                     </li>
 
-                    <li><a href="{{ route('contactus')}}" class="nav-link">Projelerimiz</a></li>
+                    <li><a href="{{ route('project')}}" class="nav-link">Projelerimiz</a></li>
                     <li><a href="{{ route('reference')}}" class="nav-link">Referanslarımız</a></li>
                     <li><a href="{{ route('contactus')}}" class="nav-link">İletişim</a></li>
                 </ul>

@@ -45,6 +45,10 @@ class HomeController extends Controller
         return view('frontend.service.detail', compact('Detay'));
     }
 
+    public function project(){
+        return view('frontend.project.index');
+    }
+
     public function projectdetail($slug){
         $Detay = Page::where('slug', $slug)->firstOrFail();
         return view('frontend.page.index', compact('Detay'));

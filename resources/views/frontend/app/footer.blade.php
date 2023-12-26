@@ -22,17 +22,17 @@
                     </li>
                    
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Projelerimiz" class="white-hover">
+                        <a href="{{ route('project')}}" title="Projelerimiz" class="white-hover">
                            Projelerimiz
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="Referanslarımız" class="white-hover">
+                        <a href="{{ route('reference')}}" title="Referanslarımız" class="white-hover">
                            Referanslarımız
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('corporatedetail', 'hakkimizda')}}" title="İnsan Kaynakları" class="white-hover">
+                        <a href="{{ route('contactus')}}" title="İnsan Kaynakları" class="white-hover">
                            İnsan Kaynakları
                         </a>
                     </li>
