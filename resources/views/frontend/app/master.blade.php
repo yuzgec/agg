@@ -17,7 +17,6 @@
 
     @include('frontend.app.js')
     @yield('customJS')
-    @vite('resources/js/app.js')
 
 </body>
 </html>
