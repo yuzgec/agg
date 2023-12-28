@@ -37,4 +37,37 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     </span>
 
 </div>
+
+<section id="service-boxes-02" class="pt-30 pb-60 bg-gray2 bt-1 b-gray1">
+    <div class="container">
+
+        <div class="col t-center">
+            <h1 class="lh-45 mt-10 uppercase">HİZMETLERİMİZ</h1>
+            <p class="light gray6 mt-15 lh-30 fs-18">Ajans olarak vermiş olduğumuz hizmetleri inceleyebilirsiniz.</p>
+        </div>
+
+        <div class="row t-left t-center-sm align-items-center">
+
+           
+            @foreach ($Service->where('category', 1) as $item)
+            <div class="col-lg-4 col-12 mt-30 perspective-lg relative zi-hover">
+                <div class="bg-white bs-lg-hover dark2 slow c-default py-40 px-40">
+                    <div class="fs-45 mt-150">
+                        <img src="/logo.jpg" alt="{{ $item->title}}" class="" width="30px">
+                    </div>
+                    <h5 class="fs-18 medium mt-25">
+                        <a href="{{ route('servicedetail', $item->slug)}}" title="{{ $item->title}}">
+                            {{ $item->title}}
+                        </a>
+                    </h5>
+                    <p class="fs-16 lh-25 mt-15 light">
+                        In sit amet posuere felis. Suspendisse finibus viverra justo eget ullamcorper.
+                    </p>
+                </div>
+            </div>
+
+            @endforeach
+        </div>
+    </div>
+</section>
 @endsection

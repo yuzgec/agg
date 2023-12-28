@@ -14,7 +14,7 @@
                     <li><a href="{{ route('corporatedetail','hakkimizda')}}" class="nav-link">Hakkımızda</a></li>
                     <li class="dd-toggle"> <a href="#" class="nav-link">Hizmetlerimiz</a>
                         <ul class="dropdown-menu to-right">
-                            @foreach ($Service as $item)
+                            @foreach ($Service->where('category', 1) as $item)
                                 <li><a href="{{ route('servicedetail', $item->slug)}}" class="nav-link">{{ $item->title }}</a></li>
                             @endforeach
                         </ul> 

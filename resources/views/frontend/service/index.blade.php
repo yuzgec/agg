@@ -52,4 +52,5 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             @endforeach
         </div>
     </div>
-</section>@endsection
+</section>
+@endsection

@@ -31,11 +31,32 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     </div>
 </section>
 
-<section id="home" class="fullwidth py-120 bg-white">
-    <div class="container-md">
-        <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
-            {!! $Detay->desc !!}
-        </span>
+<section id="home" class="fullwidth bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-12 pt-50">
+                <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
+                    {!! $Detay->desc !!}
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit recusandae corrupti ex harum quidem cum eius ipsum vero laudantium, excepturi unde beatae nostrum odit iusto quo aut esse maxime dolore?
+                </span>
+            </div>
+            <div class="col-md-3 col-12 bg-gray">   
+                <div
+                    class="fs-15 gray8  lh-lg mb-30  px-15-sm py-50 py-20-sm">
+                    <h4 class="fs-17 black">HİZMETLERİMİZ</h4>
+                    @foreach ($Service->where('category', 1) as $item)
+                    <a
+                        href="{{ route('servicedetail', $item->slug)}}" title="{{ $item->title}}"
+                        class=" py-15 bb-1 b-gray1 colored-hover d-flex align-items-center justify-content-between">
+                        <span class="fs-inherit color-inherit"><i class="fas fa-angle-right"></i> {{ $item->title }}</span>
+                    </a>
+                    @endforeach
+                </div>
+            </div>  
+
+        </div>
+   
+
     </div>
 </section>
 

@@ -85,14 +85,14 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             <div class="col-lg-3 col-12 t-left mt-70-sm">
                 <!-- Subtitle -->
                 <h4 class="fs-24 dark3 lh-35">
-                    Always keep your mind fresh. This will need you.
+                    {{ $Detay->title}}
                 </h4>
                 <!-- Title -->
-                <p class="fs-16 gray6 lh-25 mt-15">
-                    This is a project template that includes an image gallery and sidebar. Image gallery and sidebar positions can easily change, you can move them right-left. You can easily add your pictures and add all project details to the sidebar section. Customer address, Google map link, customer logo or whatever is required.
-                </p>
+                <div class="fs-16 gray6 lh-25 mt-15">
+                   {!! $Detay->desc !!}     
+                </div>
                 <!-- Detail -->
-                <div class="mt-50">
+                {{-- <div class="mt-50">
                     <h5 class="fs-13 dark6 ls-05 medium">Client Logo</h5>
                     <img src="images/signature_dark.svg" alt="Example project logo template" class="mt-15 width-120">
                 </div>
@@ -114,13 +114,13 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                 <!-- Detail -->
                 <div class="mt-15 pt-15 bt-1 b-gray1">
                     <h5 class="fs-13 dark6 ls-05 medium">Client Website</h5>
-                    <p class="gray8 lh-25 fs-14 mt-5"><a href="https://themeforest.net/item/quadra-creative-multipurpose-template/21409528" target="_blank" class="underline-hover">www.google.com</a></p>
+                    <p class="gray8 lh-25 fs-14 mt-5"><a href="" target="_blank" class="underline-hover">www.google.com</a></p>
                 </div>
                 <!-- Detail -->
                 <div class="mt-15 pt-15 bt-1 b-gray1">
-                    <h5 class="fs-13 dark6 ls-05 medium">Share</h5>
+                    <h5 class="fs-13 dark6 ls-05 medium">Paylaş</h5>
                     <!-- Facebook -->
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=quadra.goldeyestheme.com/project-06.html" target="_blank" class="icon-sm opacity-8-hover bg-facebook white slow-sm mt-5 mr-5">
+                    <a href="" target="_blank" class="icon-sm opacity-8-hover bg-facebook white slow-sm mt-5 mr-5">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <!-- Twitter -->
@@ -134,14 +134,13 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
                     <!-- Linkedin -->
                     <a href="https://www.linkedin.com/shareArticle?url=http://quadra.goldeyestheme.com/project-06.html&amp;title=Quadra+Project+Template" target="_blank" class="icon-sm opacity-8-hover bg-linkedin white slow-sm mt-15 mr-5">
                         <i class="fab fa-linkedin"></i>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
             <!-- End col for project details -->
         </div>
         <!-- End row for cols -->
     </div>
-    <!-- End container for gallery items -->
 </section>
 @endsection
 @section('customJS')
@@ -151,16 +150,16 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         $('#gallery-items').cubeportfolio({
             mediaQueries: [{
                 width: 992,
-                cols: 3,
+                cols: 4,
             }, {
                 width: 640,
-                cols: 3,
+                cols: 4,
             }, {
                 width: 480,
                 cols: 2,
             }],
-            gapHorizontal: 15,
-            gapVertical: 15,
+            gapHorizontal: 5,
+            gapVertical: 5,
             displayTypeSpeed: 0,
         });
 

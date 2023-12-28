@@ -92,6 +92,11 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             </ul>
         </div> --}}
 
+        <div class="col t-center">
+            <h1 class="lh-45 mt-10 uppercase">PROJELERİMİZ</h1>
+            <p class="light gray6 mt-15 lh-30 fs-18">Ajans olarak yapmış olduğumuz bazı örnek çalışmaları inceleyebilirsiniz.</p>
+        </div>
+
         <div id="portfolio-items" class="mt-40">
             @foreach ($Service->where('category', 2) as $item)
                 <a href="{{ route('projectdetail', $item->slug)}}" class="cbp-item art photography">
