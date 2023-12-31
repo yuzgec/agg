@@ -73,7 +73,7 @@
             data-slick='{"dots": false, "touchThreshold": 150, "speed":600, "arrows": false, "fade": false, "draggable":true, "slidesToShow": 4, "slidesToScroll": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2, "slidesToScroll": 2}},{"breakpoint": 768,"settings":{"slidesToShow": 1,"slidesToScroll": 1}}]}' >
             @foreach ($Service->where('category', 3)->take('8') as $item)
                 <div class="slide px-10 " >
-                    <img src="/ref.jpg" alt="{{ $item->title}} - Ahmet Gökşin Güzeltepe" style="border: 1px #ccc solid;border-radius:5px">
+                    <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" alt="{{ $item->title}} - Ahmet Gökşin Güzeltepe" style="border: 1px #ccc solid;border-radius:5px">
                 </div>
             @endforeach
         
