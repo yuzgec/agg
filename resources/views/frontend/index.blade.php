@@ -1,6 +1,6 @@
 @extends('frontend.app.master')
 @section('content')
-<section id="home" class="mnh-600 mnh-none-sm bg-white relative">
+{{-- <section id="home" class="mnh-600 mnh-none-sm bg-white relative">
     <div class="container relative zi-5">
          <div class="row align-items-center">
               <div class="col-lg-8 py-90 pt-120-sm pb-10-sm t-left t-center-sm">
@@ -26,13 +26,13 @@
               </div>
          </div>
     </div>
-</section>
+</section> --}}
 
-{{-- <section id="home" class="relative white height-100vh mnh-600 align-items-center d-flex">
+<section id="home" class="relative white height-100vh mnh-600 align-items-center d-flex">
     <div class="bg-slider has-details custom-slider controls-mouseover arrows-long" data-slick='{"speed": 900, "arrows": true, "autoplaySpeed": 5000, "autoplay": true }'>
 
-        <div class="slide" data-background="/front/content/medusa/images/background_01.jpg" data-bg-mobile="content/medusa/images/background_02_sm.jpg">
-            <div class="d-flex align-items-lg-center align-items-start mt-90-sm justify-content-lg-start justify-content-center">
+        <div class="slide" data-background="/banner-goksin.jpg" data-bg-mobile="/banner-goksin.jpg">
+            {{-- <div class="d-flex align-items-lg-center align-items-start mt-90-sm justify-content-lg-start justify-content-center">
                 <div class="container t-left t-center-sm mb-20 mb-0-sm">
                     <h5 class="fs-20 colored animate" data-animation="fadeInDown" data-animation-delay="100">
                         Welcome to Medusa
@@ -60,12 +60,26 @@
                   
                 </div>
               
-            </div>
+            </div> --}}
             
         </div>
         
     </div>
-</section> --}}
+</section> 
+
+<div id="element-template-05" class="py-20bt-1 b-gray1 b-solid">
+    <div id="image-slider-template-05" class="mt-10 container px-5">
+        <div id="filtered-slider" class="block-img dots-circle dots-close c-grab" 
+            data-slick='{"dots": false, "touchThreshold": 150, "speed":600, "arrows": false, "fade": false, "draggable":true, "slidesToShow": 4, "slidesToScroll": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2, "slidesToScroll": 2}},{"breakpoint": 768,"settings":{"slidesToShow": 1,"slidesToScroll": 1}}]}' >
+            @foreach ($Service->where('category', 3)->take('8') as $item)
+                <div class="slide px-10 " >
+                    <img src="/ref.jpg" alt="{{ $item->title}} - Ahmet Gökşin Güzeltepe" style="border: 1px #ccc solid;border-radius:5px">
+                </div>
+            @endforeach
+        
+        </div>
+    </div>
+</div>
 
 
     <section id="about" class="pb-50 pb-20-sm t-center-sm mt-50">
@@ -112,95 +126,69 @@
     	</div>
     </section>
 
-    <section id="portfolio-grid" class="pb-120 pt-90 bt-1 b-gray1 b-solid">
-        <div class="container-fluid">
-            {{-- <div class="t-center">
-                <ul class="filter-tags justify-content-center d-inline-flex mansalva medium uppercase bb-1 b-solid b-gray2" role="tablist">
-                    <li>
-                        <div data-filter="*" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Tümü
-                        </div>
-                    </li>
-                    <li>
-                        <div data-filter=".art" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Katalog
-                        </div>
-                    </li>
-                    <li>
-                        <div data-filter=".photography" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Ambalaj Tasarım
-                        </div>
-                    </li>
-                    <li>
-                        <div data-filter=".graphic" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Logo Tasarım
-                        </div>
-                    </li>
-                    <li>
-                        <div data-filter=".brand" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
-                            Web Sitesi
-                        </div>
-                    </li>
-                </ul>
-            </div> --}}
-            <div class="col t-center">
-                <h1 class="lh-45 mt-10 uppercase">PROJELERİMİZ</h1>
-                <p class="light gray6 mt-15 lh-30 fs-18">Ajans olarak yapmış olduğumuz bazı örnek çalışmaları inceleyebilirsiniz.</p>
-            </div>
 
-            <div id="portfolio-items" class="mt-40">
+    <section id="element-template-06" class="py-120 bt-1 b-gray1 b-solid">
+   
+        <div id="image-slider-template-06" class="mt-70 container-fluid o-hidden-x px-5">
+   
+            <div id="image-slider-06" class="custom-slider fw-slider block-img dots-circle c-grab t-center" 
+                data-slick='{"variableWidth": true, "centerMode": true, "dots": true, "speed":600, "arrows": false, "fade": false, "draggable":true, "slidesToShow": 1, "slidesToScroll": 1, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}},{"breakpoint": 768,"settings":{"slidesToShow": 1}}]}' >
                 @foreach ($Service->where('category', 2) as $item)
-                    <a href="{{ route('projectdetail', $item->slug)}}" class="cbp-item art photography">
-                        <div class="work-image">
-                            <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" 
-                                 alt="{{ $item->title}} - Gökşin Güzeltepe" />
+             
+                <div class="px-10 relative">
+                    <div class="bs-lg">
+                        <!-- Overlay text -->
+                        <div class="overlay d-flex align-items-center justify-content-center">
+                            <h3 class="fs-18 lh-30 white">
+                                {{ $item->title}}
+                            </h3>
                         </div>
-                        <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
-                            <div class="line bg-colored1 height-1 width-0"></div>
-                            <h3 class="fs-25 lh-50 fs-30-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> {{ $item->title}} </h3>
-                            <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
-                        </div>
-                    </a>
+                        <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" 
+                        alt="{{ $item->title}} - Gökşin Güzeltepe"  class="img-fluid" style="max-height:500px"/>
+                    </div>
+                </div>
                 @endforeach
+                
             </div>
-
+           
         </div>
+        <!-- End template -->
     </section>
+
+   
 
 @endsection
 @section('customJS')
+
+
 <script>
-    (function($, window, document, undefined) {
-        'use strict';
-        $('#portfolio-items').cubeportfolio({
-            mediaQueries: [{
-                width: 992,
-                cols: 5,
-            }, {
-                width: 640,
-                cols: 2,
-            }, {
-                width: 480,
-                cols: 1,
-            }],
-            filters: '.filter-tags',
-            defaultFilter: '*',
-            layoutMode: 'masonry',
-            gridAdjustment: 'responsive',
-            gapHorizontal: 0,
-            gapVertical: 0,
-            caption: 'none',
-            animationType: 'quicksand',
-            displayType: 'none',
-            displayTypeSpeed: 0,
-        });
 
-        $(".cbp-filter-item-active").addClass("active");
-        $("[data-filter]").on("click", function(){
-            $("[data-filter]").removeClass("active");
-            $(".cbp-filter-item-active").addClass("active");
+    $(document).ready(function(){
+        "use strict";
+        /* Options for filtered slider. You must copy this codes to your website if you use it. */
+        $('#filtered-slider').on('init', function(event, slick){
+            $(".filter-button").each(function(){
+                var filterName = $('.filter-button').attr('data-category');
+                $("#filtered-slider").find('.' + filterName).parents(".slick-slide").addClass(filterName);
+            });
         });
+        $('#filtered-slider').slick();
+        var filtered = false;
+        $('.filter-button').on('click', function(){
+            var filterClass = $(this).attr('data-category'),
+                text = $(this).attr('data-filter-text'), showAllText = $(this).attr("data-show-all-text");
+            if (filtered === false) {
+                $('#filtered-slider').slick('slickFilter', '.' + filterClass);
+                $(this).addClass("active").find(".button-text").html(showAllText);
+                filtered = true;
+            } else {
+                $('#filtered-slider').slick('slickUnfilter');
+                $(this).removeClass("active").find(".button-text").html(text);
+                filtered = false;
+            }
+        });
+    });
 
-    })(jQuery, window, document);
 </script>
+
 @endsection

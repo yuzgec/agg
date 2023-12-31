@@ -150,10 +150,10 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
         $('#gallery-items').cubeportfolio({
             mediaQueries: [{
                 width: 992,
-                cols: 4,
+                cols: 3,
             }, {
                 width: 640,
-                cols: 4,
+                cols: 3,
             }, {
                 width: 480,
                 cols: 2,
