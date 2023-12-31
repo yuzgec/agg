@@ -16,19 +16,22 @@ class ViewShareProvider extends ServiceProvider
     public function boot()
     {
 
-        $Pages = Cache::remember('pages',now()->addYear(1), function () {
-            return Page::with('getCategory')->get();
-        });
+        // $Pages = Cache::remember('pages',now()->addYear(1), function () {
+        //     return Page::with('getCategory')->get();
+        // });
 
-        $Service = Cache::remember('service',now()->addYear(1), function () {
-            return Service::orderBy('rank', 'asc')->get();
-        });
+        // $Service = Cache::remember('service',now()->addYear(1), function () {
+        //     return Service::orderBy('rank', 'asc')->get();
+        // });
 
-        $Blog = Cache::remember('blog',now()->addYear(1), function () {
-            return Blog::all();
-        });
+        // $Blog = Cache::remember('blog',now()->addYear(1), function () {
+        //     return Blog::all();
+        // });
 
-
+        $Pages = Page::with('getCategory')->get();
+        $Service = Service::orderBy('rank', 'asc')->get();
+        $Blog = Blog::all();
+     
         View::share([
             'Pages' => $Pages,
             'Service' => $Service,

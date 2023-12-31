@@ -1,13 +1,13 @@
-<nav id="navigation" class="modern-nav fs-12 bordered bg-blur link-hover-01 hover-dark nav-white hide-hover-cursor dropdown-radius" data-offset="0">
+<nav id="navigation" class="modern-nav fs-12 bordered sticky link-hover-01 hover-dark nav-white dropdown-radius" data-offset="50">
     <div class="container nav-container">
         <div class="row nav-wrapper justify-content-end">
-            <div class="col-md-2">
+            <div class="col">
                 <a href="{{ route('home')}}" class="logo">
-                     <img src="/logo.jpg" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-100">
-                     <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
-                </a>
+                    <img src="/logo-goksin.jpg" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-400">
+                    <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
+               </a>
             </div>
-            <div class="col-md-10 nav-menu">
+            <div class="col ml-auto nav-menu">
                 <ul class="nav-links justify-content-end">
                     <li class="logo-for-mobile-navigation"><img src="images/logos/logo_03_dark.svg" alt="{{ config('settings.img_alt')}}"  class="logo-white mxw-100"></li>
                     <li><a href="{{ route('home')}}" class="nav-link">Anasayfa</a></li>
@@ -19,7 +19,6 @@
                             @endforeach
                         </ul> 
                     </li>
-
                     <li><a href="{{ route('project')}}" class="nav-link">Projelerimiz</a></li>
                     <li><a href="{{ route('reference')}}" class="nav-link">Referanslarımız</a></li>
                     <li><a href="{{ route('contactus')}}" class="nav-link">İletişim</a></li>
@@ -29,7 +28,6 @@
                 <ul class="nav-links justify-content-end">
                     <li class="extra-links">
                         <div class="bracket"></div>
-                        <a href="#" class="nav-link search-form-trigger"><i class="ti-search"></i></a>
                         <a href="https://www.instagram.com/{{ config('settings.instagram')}}" target="_blank" class="nav-link" title="Instagram"><i class="ti-instagram"></i></a>
                         <a href="https://www.facebook.com/{{ config('settings.facebook')}}" target="_blank" class="nav-link" title="facebook"><i class="ti-facebook"></i></a>
                         <a href="{{ route('contactus')}}" class="nav-button white bg-colored fs-12 uppercase bold slow" title="Teklif İste"><span>Teklif İste</span></a>
