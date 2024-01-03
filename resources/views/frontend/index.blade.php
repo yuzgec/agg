@@ -1,12 +1,40 @@
 @extends('frontend.app.master')
+@section('customCSS')
+<style>
+    /* Image animation */
+    .cbp-item .work-image{-webkit-transform:scale(1);transform:scale(1); -webkit-transition:transform 0.5s;transition:transform 0.5s;}
+    .cbp-item:hover .work-image{-webkit-transform:scale(1.03);transform:scale(1.03);}
+    /* Details animation */
+    .cbp-item .details{opacity:0;-webkit-transform:scale(1.04) perspective(1000px);transform:scale(1.04) perspective(1000px);-webkit-transition:all 0.5s;transition:all 0.5s;}
+    .cbp-item:hover .details{opacity:1;-webkit-transform:scale(1) perspective(1000px);transform:scale(1) perspective(1000px);}
+    /* Texts and line animations */
+    .cbp-item .details .title, .cbp-item .details .tag{opacity:0;-webkit-transform:translateY(15px);transform:translateY(15px);-webkit-transition:all 0.5s;transition:all 0.5s;}
+    .cbp-item:hover .details .title, .cbp-item:hover .details .tag{opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
+    .cbp-item:hover .details .tag{-webkit-transition-delay:0.1s;transition-delay:0.1s;}
+    .cbp-item .details .line{-webkit-transition:all 0.3s;transition:all 0.3s;}
+    .cbp-item:hover .details .line{width:70px!important;}
+
+    /* Dots Navigation */
+    .dots-circle .cbp-nav-pagination{bottom:-60px;}
+    .dots-circle .cbp-nav-pagination .cbp-nav-pagination-item{width:25px;height:25px;background-color:transparent;border-radius:50%;display:inline-flex;display:-ms-inline-flexbox;justify-content:center;-ms-flex-pack:center;align-items:center;-ms-flex-align:center;}
+    .dots-circle .cbp-nav-pagination .cbp-nav-pagination-item:before{width:5px;height:5px;background-color:#222;box-shadow:inset 0 0 0 0.5px transparent;-webkit-transform:scale(1);transform:scale(1);content:'';display: block;border-radius:inherit;-webkit-transition:all 0.5s;transition:all 0.5s;}
+    .dots-circle .cbp-nav-pagination .cbp-nav-pagination-item.cbp-nav-pagination-active:before{box-shadow:inset 0 0 0 0.5px #222;background-color:transparent!important;-webkit-transform:scale(3);transform:scale(3);}
+
+    /* Dots Navigation */
+    .cbp-nav-controls{position:absolute;left:0;top:0;z-index:100;width:100%;height:100%;pointer-events:none;}
+    .cbp-nav-controls div{font-size:20px;color:white;border-radius:0;background:rgba(24,24,24,0.3);position:absolute;top:50%;width:40px;height:90px;left:0;opacity:0;z-index:5;cursor:pointer;pointer-events:all;display:inline-flex;display:-ms-inline-flexbox;justify-content:center;-ms-flex-pack:center;align-items:center;-ms-flex-align:center;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:all 0.5s;-moz-transition:all 0.5s;transition:all 0.5s;}
+    .cbp:hover .cbp-nav-controls div{opacity:.55;}
+    .cbp-nav-controls div.cbp-nav-next{left:auto;right:1px;}
+    .cbp-nav-controls div:before,.cbp-nav-controls div:after{content:"\e64a";display:inline-flex;display:-ms-inline-flexbox;z-index:2;font-family:'themify';color:inherit;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;transition:all 0.5s;}
+    .cbp-nav-controls div:after{display:none;content:'';z-index:0;}
+    .cbp:hover .cbp-nav-controls div:hover{opacity:1;}
+    .cbp-nav-controls div.cbp-nav-next:before{content:"\e649";}
+</style>
+@endsection
 @section('content')
-
-
 <div id="home">
-
-
     <div id="rev_slider_1084_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="web-light-hero" data-source="gallery" 
-    style="margin:0px auto;background-image:url('/slider/banner-back.jpg');padding:0px;margin-top:0px;margin-bottom:0px;">
+        style="margin:0px auto;background-image:url('/slider/banner-back.jpg');padding:0px;margin-top:0px;margin-bottom:0px;">
         <div id="rev_slider_1084_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
         <ul>    
         <li data-index="rs-3074" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  
@@ -51,7 +79,6 @@
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 7;text-transform:none;border-width:0px;">
-              
             </div>
 
             <div class="tp-caption   tp-resizeme rs-parallaxlevel-3"
@@ -70,7 +97,6 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-
                 style="z-index: 10;text-transform:none;border-width:0px;">
                 <div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="30" data-xs="-400" data-xe="400" data-ys="0" data-ye="0">
                     <img src="/slider/cloud2.png" alt="" data-ww="['600px','600px','300','150']" data-hh="['278px','278px','139','70']" width="600" height="278" 
@@ -82,7 +108,7 @@
             <div class="tp-caption tp-resizeme rs-parallaxlevel-2"
                  id="slide-3074-layer-5"
                  data-x="['left','left','left','left']" data-hoffset="['530','553','127','58']"
-                 data-y="['top']" data-voffset="['-250']"
+                 data-y="['top','top','top','top']" data-voffset="['-300','0','663','560']"
                 data-width="none"
                 data-height="none"
                 data-whitespace="nowrap"
@@ -96,8 +122,8 @@
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 11;text-transform:none;border-width:0px;">
-                <img src="/slider/goksin-image.png" alt="" data-ww="['800px','260px','130px','100px']"
-                 data-hh="['1205px','450px','225px','173px']" data-no-retina> 
+                <img src="/slider/goksin-image.png" alt="" data-ww="['800px','500px','130px','100px']"
+                 data-hh="['1205px','753px','225px','173px']" data-no-retina> 
                 </div>
 
              <div class="tp-caption tp-resizeme rs-parallaxlevel-2"
@@ -146,12 +172,33 @@
                 </div>
             </div>
 
-            <div class="tp-caption WebProduct-Title   tp-resizeme rs-parallaxlevel-7"
-                 id="slide-3074-layer-7"
+            <div class="tp-caption WebProduct-Title tp-resizeme rs-parallaxlevel-7"
+            id="slide-3074-layer-77"
+            data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']"
+            data-y="['middle','middle','top','top']" data-voffset="['-250','-150','177','160']"
+           data-fontsize="['50','30','75','60']"
+           data-lineheight="['50','30','75','60']"
+           data-width="none"
+           data-height="none"
+           data-whitespace="nowrap"
+           data-type="text"
+           data-responsive_offset="on"
+           data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},
+           {"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+           data-textAlign="['left','left','left','left']"
+           data-paddingtop="[0,0,0,0]"
+           data-paddingright="[0,0,0,0]"
+           data-paddingbottom="[0,0,0,0]"
+           data-paddingleft="[0,0,0,0]"
+           style="z-index: 14; white-space: nowrap;text-transform:none;font-weight:normal;text-shadow:2px 2px 1px white;font-family: 'Poppins', sans-serif ">
+           Ürünlerinize <span style="color:#24fecc">değer</span> katın,
+       </div>
+
+            <div class="tp-caption WebProduct-Title tp-resizeme rs-parallaxlevel-7"
+                 id="slide-3074-layer-66"
                  data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']"
-                 data-y="['middle','middle','top','top']" data-voffset="['-100','0','177','160']"
-                data-fontsize="['90','90','75','60']"
-                data-lineheight="['90','90','75','60']"
+                 data-y="['middle','middle','top','top']" data-voffset="['50','150','177','160']"
+                data-lineheight="['10','10','75','60']"
                 data-width="none"
                 data-height="none"
                 data-whitespace="nowrap"
@@ -164,15 +211,40 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-                style="z-index: 14; white-space: nowrap;text-transform:none;font-weight:bold;text-shadow:2px 2px 1px white ">AMBALAJ<br>TASARIMINDA<br>BİZE GÜVENİN! </div>
+                style="z-index: 14;">
+                <div style="min-width: 300px;min-height: 20px;background:#24fecc;width:700px"></div>
+            </div>
 
-            <div class="tp-caption WebProduct-Content   tp-resizeme rs-parallaxlevel-7"
+            <div class="tp-caption WebProduct-Title tp-resizeme rs-parallaxlevel-7"
+            id="slide-3074-layer-7"
+            data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']"
+            data-y="['middle','middle','top','top']" data-voffset="['-100','0','177','160']"
+           data-fontsize="['90','90','75','60']"
+           data-lineheight="['90','90','75','60']"
+           data-width="none"
+           data-height="none"
+           data-whitespace="nowrap"
+           data-type="text"
+           data-responsive_offset="on"
+           data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},
+           {"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+           data-textAlign="['left','left','left','left']"
+           data-paddingtop="[0,0,0,0]"
+           data-paddingright="[0,0,0,0]"
+           data-paddingbottom="[0,0,0,0]"
+           data-paddingleft="[0,0,0,0]"
+           style="z-index: 14; white-space: nowrap;text-transform:none;font-weight:bold;text-shadow:2px 2px 1px white;font-family: 'Poppins', sans-serif ">
+           AMBALAJ<br>TASARIMINDA<br>BİZE GÜVENİN! 
+       </div>
+
+
+            <div class="tp-caption WebProduct-Content tp-resizeme rs-parallaxlevel-7"
                 id="slide-3074-layer-9"
                 data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']"
-                data-y="['middle','middle','top','top']" data-voffset="['129','127','365','314']"
-                data-fontsize="['24','16','16','14']"
-                data-lineheight="['24','24','24','22']"
-                data-width="['600','356','370','317']"
+                data-y="['middle','middle','top','top']" data-voffset="['129','200','365','314']"
+                data-fontsize="['20','16','16','14']"
+                data-lineheight="['20','24','24','22']"
+                data-width="['600','600','370','317']"
                 data-height="['none','none','81','88']"
                 data-whitespace="normal"
                 data-type="text"
@@ -184,12 +256,10 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-                style="z-index: 15; min-width: 600px; max-width:600px; white-space: normal;text-transform:none;">
+                style="z-index: 15; min-width: 600px; max-width:600px; white-space: normal;text-transform:none;font-family: 'Poppins', sans-serif ">
                     Sürekli evrilen grafik tasarım trendlerini yakından takip eder<br>
                     ve bu bilgiyi özgün, yaratıcı tasarımlarınıza entegre ederiz.
-                </div>
-
-            <!-- LAYER NR. 12 -->
+            </div>
             <a href="{{ route('contactus')}}" class="tp-caption rev-btn rev-btn  rs-parallaxlevel-8"
                 id="slide-3074-layer-8"
                 data-x="['left','left','left','left']" data-hoffset="['30','30','200','80']"
@@ -210,118 +280,51 @@
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[40,40,40,40]"
                 style="z-index: 526; white-space: nowrap; font-size: 16px; line-height: 48px; font-weight: 600; color:
-                 rgba(255, 255, 255, 1.00);text-transform:none;background-color:rgba(51, 51, 51, 1.00);border-color:rgba(0, 0, 0, 1.00);
-                 border-width:2px;letter-spacing:1px;">İLETİŞİME GEÇ</a>
+                rgba(255, 255, 255, 1.00);text-transform:none;background-color:rgba(51, 51, 51, 1.00);border-color:rgba(0, 0, 0, 1.00);
+                border-width:2px;letter-spacing:1px;">İLETİŞİME GEÇ
+            </a>
         </li>
     </ul>
     <div style="" class="tp-static-layers">
-
-            <div class="tp-caption -   tp-static-layer"
-                id="slider-1084-layer-1"
-                data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
-                data-y="['top','top','top','top']" data-voffset="['30','30','30','30']"
-                data-width="none"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-type="text"
-                data-actions='[{"event":"click","action":"toggleclass","layer":"slider-1084-layer-1","delay":"0","classname":"open"},
-                {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-3","delay":"0"},
-                {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-4","delay":"0"},
-                {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-5","delay":"0"},
-                {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-6","delay":"0"}]'
-                data-basealign="slide"
-                data-responsive_offset="off"
-                data-responsive="off"
-                data-startslide="-1"
-                data-endslide="-1"
-                data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},
-                {"delay":"wait","speed":1000,"to":"auto:auto;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="z-index: 17; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400;
-                color: rgba(255, 255, 255, 1.00);text-transform:none;border-width:0px;"><div id="rev-burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div> </div>
+        <div class="tp-caption -   tp-static-layer"
+            id="slider-1084-layer-1"
+            data-x="['right','right','right','right']" data-hoffset="['30','30','30','30']"
+            data-y="['top','top','top','top']" data-voffset="['30','30','30','30']"
+            data-width="none"
+            data-height="none"
+            data-whitespace="nowrap"
+            data-type="text"
+            data-actions='[{"event":"click","action":"toggleclass","layer":"slider-1084-layer-1","delay":"0","classname":"open"},
+            {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-3","delay":"0"},
+            {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-4","delay":"0"},
+            {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-5","delay":"0"},
+            {"event":"click","action":"togglelayer","layerstatus":"hidden","layer":"slider-1084-layer-6","delay":"0"}]'
+            data-basealign="slide"
+            data-responsive_offset="off"
+            data-responsive="off"
+            data-startslide="-1"
+            data-endslide="-1"
+            data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},
+            {"delay":"wait","speed":1000,"to":"auto:auto;","ease":"nothing"}]'
+            data-textAlign="['left','left','left','left']"
+            data-paddingtop="[0,0,0,0]"
+            data-paddingright="[0,0,0,0]"
+            data-paddingbottom="[0,0,0,0]"
+            data-paddingleft="[0,0,0,0]"
+            style="z-index: 17; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400;
+            color: rgba(255, 255, 255, 1.00);text-transform:none;border-width:0px;">
+            <div id="rev-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+        </div>
     </div>
     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> </div>
     </div>
 
 
 </div>
-
-
-
-{{-- <section id="home" class="mnh-600 mnh-none-sm bg-white relative">
-    <div class="container relative zi-5">
-         <div class="row align-items-center">
-              <div class="col-lg-8 py-90 pt-120-sm pb-10-sm t-left t-center-sm">
-                   <div class="bg-soft-white3 px-15 py-10 radius d-inline-flex animated" data-animation="fadeInDown" data-animation-delay="500">
-                        <h5 class="dark medium fs-17">
-                            Ahmet Gökşin Güzeltepe
-                        </h5>
-                   </div>
-                   <h2 class="mt-30 mt-20-sm fs--lg lh-sm dark medium animated" data-animation="fadeInDown" data-animation-delay="700">
-                       
-                   </h2>
-                   <p class="mt-40 mt-25-sm fs-20 lh-30 dark animated" data-animation="fadeInDown" data-animation-delay="900">
-
-                </p>
-                   <div class="mt-50 animated" data-animation="fadeInDown" data-animation-delay="1100">
-                        <a href="{{ route('contactus')}}" class="lg-btn bg-white b-2 b-white bg-transparent-hover gray8 white-hover radius-xl uppercase semibold slow-sm">
-                            İletişime Geç
-                        </a>
-                   </div>
-              </div>
-              <div class="col-lg-4 d-flex align-items-center justify-content-center unselectable pointer-events-none animated" data-animation="fadeInRight" data-animation-delay="1500">
-                   <img src="/goksin.png" class="d-block   mnh-700 mnh-none-sm mxw-300-sm relative ">
-              </div>
-         </div>
-    </div>
-</section> --}}
-
-{{-- <section id="home" class="relative white height-100vh mnh-600 align-items-center d-flex">
-    <div class="bg-slider has-details custom-slider controls-mouseover arrows-long" data-slick='{"speed": 900, "arrows": true, "autoplaySpeed": 5000, "autoplay": true }'>
-
-        <div class="slide" data-background="/banner-goksin.jpg" data-bg-mobile="/banner-goksin.jpg">
-         <div class="d-flex align-items-lg-center align-items-start mt-90-sm justify-content-lg-start justify-content-center">
-                <div class="container t-left t-center-sm mb-20 mb-0-sm">
-                    <h5 class="fs-20 colored animate" data-animation="fadeInDown" data-animation-delay="100">
-                        Welcome to Medusa
-                    </h5>
-                    <h1 class="mt-15 fs-45 fs-30-sm lh-sm semibold white animate" data-animation="fadeInDown" data-animation-delay="300">
-                        Connect With Your
-                    </h1>
-                    <h1 class="fs-50 fs-30-sm lh-sm semibold white animate" data-animation="fadeInDown" data-animation-delay="400">
-                        Customers, Not Just Your
-                    </h1>
-                    <h1 class="fs-50 fs-30-sm lh-sm semibold white animate" data-animation="fadeInDown" data-animation-delay="500">
-                        Business.
-                    </h1>
-                    <p class="fs-20 fs-17-sm lh-30 white light mt-20 mt-10-sm mxw-700 d-inline-flex animate" data-animation="fadeInDown" data-animation-delay="700">
-                        Growing bleeding edge to, consequently, be <br class="visible-lg">
-                        transparent. Creating user stories and demographics. <br class="visible-lg">
-                        Good Design Matters
-                    </p>
-                    <div class="mt-30 mt-20-sm animate" data-animation="fadeInDown" data-animation-delay="900">
-                        <a href="#about" class="lg-btn px-40-sm py-15-sm white dark-hover bg-transparent bg-white-hover b-1 b-white fs-18 fs-16-sm slow">
-                            Get started
-                        </a>
-                    </div>
-
-                  
-                </div>
-              
-            </div> 
-            
-        </div>
-        
-    </div>
-</section>  --}}
 
 <div id="element-template-05" class="py-20bt-1 b-gray1 b-solid">
     <div id="image-slider-template-05" class="mt-10 container px-5">
@@ -337,89 +340,110 @@
     </div>
 </div>
 
+<section id="about" class="pb-50 pb-20-sm t-center-sm mt-50">
 
-    <section id="about" class="pb-50 pb-20-sm t-center-sm mt-50">
+    <div class="container">
+        <div class="row">
 
-        <div class="container">
-    		<div class="row">
+            <div class="col-md-5 col-12 pr-50 pr-15-sm">
+                <h5 class="fs-17 colored uppercase">Hakkımızda</h5>
+                <h1 class="bold mt-10 fs-40 fs-30-sm lh-50 lh-40-sm dark3">
+                    A. Gökşin Güzeltepe <br class="visible-xl hidden-lg">
+                </h1>
+                <p class="mt-20 fs-20 gray7 lh-35 lh-30-sm">
+                    2009 yılından bu yana grafik tasarım alanında hizmet veren Ahmet Gökşin Güzeltepe, sektördeki derin tecrübesini ve yenilikçi 
+                    bakış açısını her projeye yansıtmaktadır. 
+                </p>
 
-    			<div class="col-md-5 col-12 pr-50 pr-15-sm">
-    				<h5 class="fs-17 colored uppercase">Hakkımızda</h5>
-    				<h1 class="bold mt-10 fs-40 fs-30-sm lh-50 lh-40-sm dark3">
-    					A. Gökşin Güzeltepe <br class="visible-xl hidden-lg">
-    				</h1>
-    				<p class="mt-20 fs-20 gray7 lh-35 lh-30-sm">
-                        2009 yılından bu yana grafik tasarım alanında hizmet veren Ahmet Gökşin Güzeltepe, sektördeki derin tecrübesini ve yenilikçi 
-                        bakış açısını her projeye yansıtmaktadır. 
-    				</p>
-
-    				<p class="mt-15 fs-20 gray7 lh-35 lh-30-sm">
-                        Matbaa ile başlayan profesyonel yolculuğu, tanıtım ofisleri, kreatif reklam ajansları ve kurumsal şirketlerdeki çalışmalarla 
-                        devam etmiş, şimdilerde ise freelance grafiker olarak faaliyet göstermektedir. Bu süreçte, sektörün farklı alanlarında
-                         pek çok projeye imza atarak, çeşitli deneyimler edinmiştir.
-    				</p>
-    				
-    			</div>
-
-    			<div class="col-md-7 col-12">
-    				<div class="row" data-masonry='{"percentPosition":true}'>
-                        @foreach ($Service->where('category', 1) as $item)
-                            <div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
-                                <div class="bg-colored bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
-                                    <h5 class="text-white fs-17">
-                                        {{ $item->title}}
-                                    </h5>
-                                    <p class="mt-20 fs-18 text-white lh-30">
-                                        {{ $item->short}}    			
-                                    </p>
-                                </div>
-                            </div>
-                        @endforeach
-    				</div>
-    			</div>
-
-    		</div>
-    	</div>
-    </section>
-
-
-    <section id="element-template-06" class="py-120 bt-1 b-gray1 b-solid">
-   
-        <div id="image-slider-template-06" class="mt-70 container-fluid o-hidden-x px-5">
-   
-            <div id="image-slider-06" class="custom-slider fw-slider block-img dots-circle c-grab t-center" 
-                data-slick='{"variableWidth": true, "centerMode": true, "dots": true, "speed":600, "arrows": false, "fade": false, "draggable":true, "slidesToShow": 1, "slidesToScroll": 1, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}},{"breakpoint": 768,"settings":{"slidesToShow": 1}}]}' >
-                @foreach ($Service->where('category', 2) as $item)
-             
-                <div class="px-10 relative">
-                    <div class="bs-lg">
-                        <!-- Overlay text -->
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                            <h3 class="fs-18 lh-30 white">
-                                {{ $item->title}}
-                            </h3>
-                        </div>
-                        <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" 
-                        alt="{{ $item->title}} - Gökşin Güzeltepe"  class="img-fluid" style="max-height:500px"/>
-                    </div>
-                </div>
-                @endforeach
+                <p class="mt-15 fs-20 gray7 lh-35 lh-30-sm">
+                    Matbaa ile başlayan profesyonel yolculuğu, tanıtım ofisleri, kreatif reklam ajansları ve kurumsal şirketlerdeki çalışmalarla 
+                    devam etmiş, şimdilerde ise freelance grafiker olarak faaliyet göstermektedir. Bu süreçte, sektörün farklı alanlarında
+                        pek çok projeye imza atarak, çeşitli deneyimler edinmiştir.
+                </p>
                 
             </div>
-           
-        </div>
-        <!-- End template -->
-    </section>
 
-   
+            <div class="col-md-7 col-12">
+                <div class="row" data-masonry='{"percentPosition":true}'>
+                    @foreach ($Service->where('category', 1) as $item)
+                        <div class="col-xl-6 col-lg-12 col-md-6 col-12 pt-30  px-15-sm c-default">
+                            <div class="bg-colored bg-soft-white5-hover radius-lg px-15 px-30-sm py-15">
+                                <h5 class="text-white fs-17">
+                                    {{ $item->title}}
+                                </h5>
+                                <p class="mt-20 fs-18 text-white lh-30">
+                                    {{ $item->short}}    			
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="portfolio-grid" class="pb-120 pt-90 bt-1 b-gray1 b-solid">
+    <div class="container-fluid">
+        <div class="t-center">
+            {{-- <ul class="filter-tags justify-content-center d-inline-flex mansalva medium uppercase bb-1 b-solid b-gray2" role="tablist">
+                <li>
+                    <div data-filter="*" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
+                        Tümü
+                    </div>
+                </li>
+                <li>
+                    <div data-filter=".art" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
+                        Katalog
+                    </div>
+                </li>
+                <li>
+                    <div data-filter=".photography" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
+                        Ambalaj Tasarım
+                    </div>
+                </li>
+                <li>
+                    <div data-filter=".graphic" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
+                        Logo Tasarım
+                    </div>
+                </li>
+                <li>
+                    <div data-filter=".brand" class="cbp-filter-item fs-11 py-15 px-35 px-10-sm py-10-sm bb-1 b-transparent c-pointer b-colored-active relative top-1">
+                        Web Sitesi
+                    </div>
+                </li>
+            </ul>
+        </div> --}}
+
+        <div class="col t-center">
+            <h1 class="lh-45 mt-10 uppercase">PROJELERİMİZ</h1>
+            <p class="light gray6 mt-15 lh-30 fs-18">Ajans olarak yapmış olduğumuz bazı örnek çalışmaları inceleyebilirsiniz.</p>
+        </div>
+
+        <div id="portfolio-items" class="mt-40">
+            @foreach ($Service->where('category', 2) as $item)
+                <a href="{{ route('projectdetail', $item->slug)}}" class="cbp-item art photography">
+                    <div class="work-image">
+                        <img src="{{ $item->getFirstMediaUrl('page', 'thumb') }}" 
+                             alt="{{ $item->title}} - Gökşin Güzeltepe" />
+                    </div>
+                    <div class="details py-20 px-15 zi-5 overlay bg-blur bg-soft-dark5 flex-column t-center">
+                        <div class="line bg-colored1 height-1 width-0"></div>
+                        <h3 class="fs-25 lh-50 fs-30-sm ls--1 extrabold black underline-large bigger down2x lighter px-5"> {{ $item->title}} </h3>
+                        <div class="tag capitalize white uppercase ls-1 fs-11">Katalog, Broşür</div>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+
+    </div>
+</section>
 
 @endsection
 @section('customJS')
-
-
 <script src="/front/js/revolutionslider/jquery.themepunch.revolution.min.js"></script>
 <script src="/front/js/revolutionslider/jquery.themepunch.tools.min.js"></script>
-
 <script>
 
     var tpj=jQuery;
@@ -436,8 +460,8 @@
                 delay:9000,
                 navigation: {
                 },
-                responsiveLevels:[1240,1024,778,480],
-                visibilityLevels:[1240,1024,778,480],
+                responsiveLevels:[1921,1441,1336,480],
+                visibilityLevels:[1921,1441,1336,480],
                 gridwidth:[1400,1240,778,480],
                 gridheight:[768,768,960,720],
                 lazyType:"none",
@@ -499,6 +523,45 @@
         });
     });
 
+   
+
+</script>
+
+<script>
+    (function($, window, document, undefined) {
+        'use strict';
+        // init cubeportfolio
+        $('#portfolio-items').cubeportfolio({
+            mediaQueries: [{
+                width: 992,
+                cols: 5,
+            }, {
+                width: 640,
+                cols: 2,
+            }, {
+                width: 480,
+                cols: 1,
+            }],
+            filters: '.filter-tags',
+            defaultFilter: '*',
+            layoutMode: 'masonry',
+            gridAdjustment: 'responsive',
+            gapHorizontal: 0,
+            gapVertical: 0,
+            caption: 'none',
+            animationType: 'quicksand',
+            displayType: 'none',
+            displayTypeSpeed: 0,
+        });
+
+        //Get .active class for filters
+        $(".cbp-filter-item-active").addClass("active");
+        $("[data-filter]").on("click", function(){
+            $("[data-filter]").removeClass("active");
+            $(".cbp-filter-item-active").addClass("active");
+        });
+
+    })(jQuery, window, document);
 </script>
 
 @endsection

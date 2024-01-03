@@ -1,7 +1,11 @@
 
 
 	/* Panel */
-	.panel{ position: fixed; width: 40px; left: -300px; background-color: #fff; padding: 12px 0; pointer-events: none; box-shadow: 1px 1px 23px 2px rgba(0,0,0,0.09); top:15%; border-top-right-radius: 6px; border-bottom-right-radius: 6px; transform: translateZ(0); -webkit-transform: translateZ(0); z-index: 1100; -webkit-transition: all 0.45s; -moz-transition: all 0.45s; transition: all 0.45s; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
+	.panel{ position: fixed; width: 40px; left: 300px; background-color: #fff; padding: 12px 0;
+		 pointer-events: none; box-shadow: 1px 1px 23px 2px rgba(0,0,0,0.09); top:30%;
+		  border-top-right-radius: 6px; border-bottom-right-radius: 6px; transform: translateZ(0);
+		   -webkit-transform: translateZ(0); z-index: 1100; -webkit-transition: all 0.45s; -moz-transition: all 0.45s;
+		    transition: all 0.45s; -webkit-transition-delay: 0.1s; transition-delay: 0.1s; }
 	.panel.hiding{ opacity: 0; visibility: hidden; }
 	.panel.loaded{ left: 0px; }
 	.panel-backdrop{ position: fixed; left: 0; top: 0; bottom: 0; right: 0; background-color: rgba(0,0,0,0.16); transform: translateZ(0); -webkit-transform: translateZ(0); z-index: 1099; opacity: 0; visibility: hidden; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }

@@ -3,12 +3,12 @@
 ================================================== */
 
 	/* Page Fonts - https://fonts.google.com/share?selection.family=Cabin:wght@400;500;600;700|Zen+Dots */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@200;500;600;700&display=swap');
-	.font-main{font-family: 'Montserrat', sans-serif!important;}
-	.font-secondary{font-family: 'Zen Dots', cursive !important;}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    .font-main{font-family: 'Poppins', sans-serif!important;}
 
 	/* Body Options */
-	body{ font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 0.3px;}
+	body{ font-family: 'Poppins', sans-serif; font-weight: 300; letter-spacing: 0.3px;}
 	body *{outline:none;}
 
 

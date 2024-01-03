@@ -33,7 +33,7 @@
             <div id="box-22" class="col-lg-3 col-6">
                 <img src="{{ (!$item->getFirstMediaUrl('page')) ? '/resimyok.jpg' : $item->getFirstMediaUrl('page', 'thumb') }}" class="block fullwidth" alt="Gökşin Güzeltepe">
                 <div class="d-flex justify-content-center align-items-center move-up-half">
-                    <button class="d-flex justify-content-center py-15 lh-normal slow radius-lg width-percent-75 t-center bs-lg" data-bgcolor="#000" style="background-color: #000;">
+                    <button class="d-flex justify-content-center py-5 lh-normal slow radius-lg width-percent-75 t-center bs-lg bg-black">
                         <span class="bold uppercase white fs-10">{{ $item->title }}</span>
                     </button>
                 </div>

@@ -1,37 +1,7 @@
 //show panel
         $(".panel .panel-button.theme-options").on("click", function(){
             $(".panel-switcher, .panel-backdrop").toggleClass("active"); 
-            $(".panel-switcher").load("js/theme-panel/panel-inner.html", function(){
-                //Change tone
-                $(".layout-tone").on("click", function(){
-                    var title = jQuery(this).attr('title');     
-                    jQuery('#changeable_tone').attr('href', 'css/tones/' + title + '.css');               
-                    return false;
-                });
-                //Change menu color
-                $(".menu-dark").on("click", function(){
-                    jQuery('#navigation').removeClass("nav-white").addClass("nav-dark");               
-                    return false;
-                });
-                //Change menu color
-                $(".menu-white").on("click", function(){
-                    jQuery('#navigation').removeClass("nav-dark").addClass("nav-white");               
-                    return false;
-                });
-                //Reset
-                $('.reset').on("click", function() {
-                    location.reload();
-                });
-                //Change Color
-                $(".color-button").on("click", function(){
-                    var link = jQuery(this).attr('data-link');    
-                    var skn = $("#changeable_color");
-                    jQuery(skn).attr('href', 'css/skins/' + link + '.css');   
-                    var skillBarColor = $(".skill-bar-color").css("background-color");
-                    var chart = window.chart = $('.chart').data('easyPieChart', "barColor");
-                    return false;
-                });
-            });
+         
             return false;
         });
         //Close panel
@@ -48,7 +18,7 @@
                     if (scroll > 700) {
                         $('.panel').removeClass('hiding');
                     } else {
-                        $('.panel').addClass('hiding');
+                        $('.panel').addClass('');
                     }
                 } else{
                     $('.panel').removeClass('hiding');

@@ -1,9 +1,9 @@
-<nav id="navigation" class="modern-nav fs-12 bordered sticky link-hover-01 hover-dark nav-white dropdown-radius" data-offset="50">
+<nav id="navigation" class="modern-nav fs-12  sticky link-hover-01 hover-dark nav-white dropdown-radius" data-offset="50">
     <div class="container nav-container">
         <div class="row nav-wrapper justify-content-end">
             <div class="col">
                 <a href="{{ route('home')}}" class="logo">
-                    <img src="/logo-goksin.jpg" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-400">
+                    <img src="/logo-goksin.jpg" alt="{{ config('settings.img_alt')}}" class="logo-dark mxw-600">
                     <img src="images/logos/logo_03_white.svg" alt="{{ config('settings.img_alt')}}" class="logo-white mxw-100">
                </a>
             </div>
