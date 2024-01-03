@@ -212,7 +212,7 @@
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 14;">
-                <div style="min-width: 300px;min-height: 20px;background:#24fecc;width:700px"></div>
+                <div style="min-width: 300px;min-height: 15px;background:#24fecc;width:700px"></div>
             </div>
 
             <div class="tp-caption WebProduct-Title tp-resizeme rs-parallaxlevel-7"
