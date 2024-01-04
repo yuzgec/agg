@@ -37,7 +37,6 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
             <div class="col-md-9 col-12 pt-50">
                 <span class="fs-20 fs-16-sm gray7 ls-0 lh-35 light">
                     {!! $Detay->desc !!}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit recusandae corrupti ex harum quidem cum eius ipsum vero laudantium, excepturi unde beatae nostrum odit iusto quo aut esse maxime dolore?
                 </span>
             </div>
             <div class="col-md-3 col-12 bg-gray">   
@@ -64,17 +63,17 @@ style="background-image: url(https://goldeyes.net/quadra/images/backgrounds/back
     <div class="container ">
   
         <div id="portfolio-items" class="">
-
-            <a href="https://picsum.photos/500/500?random=1" class="cbp-item art photography d-block has-overlay-hover">
+            @foreach ($Detay->getMedia('gallery') as $item)
+            <a href="{{ $item->getUrl() }}" class="cbp-item art photography d-block has-overlay-hover">
                 <div class="work-image">
-                    <img src="images/portfolio/alpha_loading.svg" data-cbp-src="https://picsum.photos/500/500?random=1" 
+                    <img src="/front/images/image_loader.svg" data-cbp-src="{{ $item->getUrl() }}" 
                     width="500" height="500" alt="{{ $Detay->title}}">
                     <div class="overlay-hover bg-soft-dark4 d-flex align-items-center justify-content-center scale-hover-container slow">
                         <i class="ti-plus fs-20 white scale-hover"></i>
                     </div>
                 </div>
             </a>
-          
+            @endforeach
         </div>
     </div>
 </section>
