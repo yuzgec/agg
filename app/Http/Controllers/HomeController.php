@@ -76,7 +76,7 @@ class HomeController extends Controller
 
 
     public function mavibeyaz(){
-        $file = public_path().'\mavi-beyaz-katalog.pdf';
+        $file = public_path().'/mavi-beyaz-katalog.pdf';
         $file = File::get($file);
         $response = Response::make($file,200);
         $response->header('Content-Type', 'application/pdf');
