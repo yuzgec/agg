@@ -23,6 +23,9 @@ Route::get('/sss', [HomeController::class, 'faq'])->name('faq');
 Route::get('/ekibimiz', [HomeController::class, 'team'])->name('team');
 Route::post('/form', [HomeController::class, 'form'])->name('form');
 
+Route::get('/mavi-beyaz-katalog', [HomeController::class, 'mavibeyaz'])->name('mavibeyaz');
+
+
 Route::group(["prefix"=>"go", 'middleware' => ['auth','web', 'admin']],function() {
     Route::get('/', 'DashboardController@index')->name('go');
 
